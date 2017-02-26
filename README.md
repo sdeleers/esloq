@@ -9,8 +9,8 @@ This repository contains:
 
 The printed circuit board:
 
-![Printed Circuit Board](/pcb/images/printed_circuit_board.jpg?raw=true "Printed Circuit Board")
+![Printed Circuit Board](/images/printed_circuit_board.jpg?raw=true "Printed Circuit Board")
 
 A demo video of the esloq:
 
-[![Smart Lock Demo](https://img.youtube.com/vi/yVSUPODDXtM/0.jpg)](https://www.youtube.com/watch?v=yVSUPODDXtM)
+[![Smart Lock Demo](/images/video_thumbnail.png)](https://www.youtube.com/watch?v=yVSUPODDXtM)
