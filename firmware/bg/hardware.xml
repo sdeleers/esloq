@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hardware>
+    <!-- Enable sleep oscillator setting for low-power mode, using "30" 
+         (appropriate for dev kit) -->
+    <sleeposc enable="true" ppm="30" />
+
+    <!-- Enable wakeup pin -->
+    <wakeup_pin enable="true" port="1" pin="3"/>
+
+    <!-- Enable host wakeup pin -->
+    <host_wakeup_pin enable="true" port="2" pin="0" state="down"/>
+
+    <!-- Default maximum power (+3dBm) and power amplifier bias (always 5) -->
+    <txpower power="15" bias="5" />
+
+    <!-- USART channel 0 used for communication with uC -->
+    <usart mode="packet" channel="1" alternate="2" baud="9600" endpoint="api"
+        flow="true" />
+
+    <!-- Tristate pin P_13 to minimize power consumption. P_13 is low in sleep and 
+         pulling it up will draw a lot of current.-->
+    <port index="1" pull="up" tristatemask="8"/>
+    <!--
+        UART PIN ASSIGNMENT TABLE:
+        +=========+===========+======+======+======+======+
+        | channel | alternate |  RX  |  TX  | RTS  | CTS  |
+        +=========+===========+======+======+======+======+
+        |    0    |     1     | P0_2 | P0_3 | P0_5 | P0_4 | 
+        |    0    |     2     | P1_4 | P1_5 | P1_3 | P1_2 | 
+        |    1    |     1     | P0_5 | P0_4 | P0_3 | P0_2 | 
+        |    1    |     2     | P1_7 | P1_6 | P1_5 | P1_4 | (SELECTED)
+        +=========+===========+======+======+======+======+
+    -->
+</hardware>

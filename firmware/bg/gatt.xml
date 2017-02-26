@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+    <service uuid="1800" id="generic_access">
+        <description>Generic Access</description>
+
+        <characteristic uuid="2A00" id="c_device_name">
+            <description>Slock Demo</description>
+            <properties read="true" const="true" />
+            <value>Smart Lock</value>
+        </characteristic>
+
+        <characteristic uuid="2A01" id="c_appearance">
+            <description>Appearance</description>
+            <properties read="true" const="true" />
+            <value type="hex">0100</value>
+        </characteristic>
+    </service>
+
+    <service uuid="180A" id="device_information">
+        <description>Device Information</description>
+    
+        <characteristic uuid="2A29" id="c_manufacturer_name">
+            <description>S-lock</description>
+            <properties read="true" const="true" />
+            <value>Bluegiga</value>
+        </characteristic>
+
+        <characteristic uuid="2A24" id="c_model_number">
+            <description>1.0</description>
+            <properties read="true" const="true" />
+            <value>BLE113</value>
+        </characteristic>
+     </service>
+        
+    <!-- Service used to lock and unlock. -->
+    <service uuid="302cf927-d510-4597-882a-caee2ae8d45b" advertise="true">
+	<description>Serial Service</description>
+
+        <!-- State of the lock: locked (1) or unlocked (0). This attribute 
+             is read by the remote side. -->
+        <characteristic uuid="5562c9f9-11b0-4b79-aa58-25ffd87c8d5d" 
+            id="c_lock_transmit">
+		<description>TX</description>
+		<properties notify="true" read="true" />
+                <value length="20" />
+	</characteristic>
+
+        <!-- Attribute used to lock and unlock. This attribute is written 
+             by the remote side: 1 to lock, 0 to unlock.-->
+        <characteristic uuid="3284c360-45ec-421a-952a-0928384e412c" 
+            id="c_lock_receive">
+		<description>RX</description>
+		<properties write="true" />
+                <value length="72" />
+        </characteristic>
+    </service>
+
+</configuration>
+

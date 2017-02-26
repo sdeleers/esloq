@@ -1,0 +1,12 @@
+#ifndef _RESPONSES_H_
+#define _RESPONSES_H_
+
+#define UNLOCKED 0
+#define LOCKED 1
+#define TICKET_RCV_SUCCESS 4
+#define TICKET_RCV_FAILURE 5
+#define TICKET_RCV_SUCCESS_LOW_BAT 6
+#define INVALID_REQUEST 255
+
+#endif
+
