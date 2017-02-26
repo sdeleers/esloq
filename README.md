@@ -2,4 +2,5 @@
 
 Code for Smart Lock.
 
-https://www.youtube.com/watch?v=yVSUPODDXtM&t=16s
+
+[![Smart Lock Demo](https://img.youtube.com/vi/yVSUPODDXtM/0.jpg)](https://www.youtube.com/watch?v=yVSUPODDXtM)
