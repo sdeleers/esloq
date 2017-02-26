@@ -1,0 +1,74 @@
+{
+  "project_info": {
+    "project_number": "176007356057",
+    "firebase_url": "https://decoded-totem-95010.firebaseio.com",
+    "project_id": "decoded-totem-95010",
+    "storage_bucket": "decoded-totem-95010.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176007356057:android:6ffc52cf4a63f9c9",
+        "android_client_info": {
+          "package_name": "com.esloq.esloqapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176007356057-4r3s75gvovp91nm19v59tiq0ojck94uv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.esloq.esloqapp",
+            "certificate_hash": "33A3FD4168FEACFA7C180CE210B62774BCE42745"
+          }
+        },
+        {
+          "client_id": "176007356057-e9ga5i2sqo5tovqkq96qhsk5qarolhf2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.esloq.esloqapp",
+            "certificate_hash": "68904C53A1CA6365311E5F0E3F27A2A806A44B24"
+          }
+        },
+        {
+          "client_id": "176007356057-rn1385f5kn011v7lgspns3ha2u8v9an3.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "176007356057-afn2kvm4ck3a4ekbsblqb2cu23b5euep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmHI4t4_6MAyA1PgAhqT_WBLSUdt-7yqE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176007356057-j8c9gmq2juhj63imv0gpkfe5h9najv0t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rainbowlabs.esloq"
+              }
+            },
+            {
+              "client_id": "176007356057-rn1385f5kn011v7lgspns3ha2u8v9an3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

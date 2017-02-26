@@ -1,0 +1,78 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.21.6'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+    defaultConfig {
+        applicationId "com.esloq.esloqapp"
+        minSdkVersion 21
+        targetSdkVersion 24
+        versionCode 7
+        versionName "0.1.6"
+        resConfigs "en"
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+    }
+    signingConfigs {
+        config {
+            keyAlias 'EsloqReleaseKey'
+            keyPassword 'android'
+            storeFile file('/home/kenny/.android/keystores/esloq_release.keystore')
+            storePassword 'android'
+        }
+    }
+    sourceSets.main {
+        jni.srcDirs = [] //mk-build needs to be involved from command line
+        jniLibs.srcDir 'src/main/libs'
+    }
+    buildTypes {
+        release {
+            //shrinkResources true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    // App's dependencies
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:support-v4:24.0.0'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:design:24.0.0'
+    compile 'com.google.firebase:firebase-core:9.2.0'
+    compile 'com.google.firebase:firebase-messaging:9.2.0'
+    compile 'com.google.firebase:firebase-auth:9.2.0'
+    compile 'com.google.android.gms:play-services-auth:9.2.0'
+    compile 'com.google.android.gms:play-services-location:9.2.0'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+        transitive = true;
+    }
+
+    // Dependencies for local unit tests
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.10.19'
+
+    // Android Testing Support Library's runner and rules
+    androidTestCompile 'com.android.support:support-annotations:24.0.0'
+    androidTestCompile "com.android.support.test:runner:0.5"
+    androidTestCompile "com.android.support.test:rules:0.5"
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+}
+
+apply plugin: 'com.google.gms.google-services'

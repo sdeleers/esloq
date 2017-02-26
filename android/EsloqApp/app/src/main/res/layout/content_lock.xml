@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".lock.LockActivity"
+    tools:showIn="@layout/activity_lock">
+
+    <!--<TextView-->
+        <!--android:id="@+id/connection_state"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="13sp"-->
+        <!--android:gravity="end"/>-->
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:id="@+id/button_lock"
+        android:src="@drawable/ic_lock_white"
+        android:textColor="@android:color/white"
+        android:elevation="2dp"
+        android:background="@drawable/lock_button"
+        android:layout_marginBottom="2dp"
+        android:onClick="onLock"
+        android:contentDescription="lock button"/>
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:id="@+id/button_unlock"
+        android:src="@drawable/ic_lock_open_white"
+        android:textColor="@android:color/white"
+        android:elevation="2dp"
+        android:background="@drawable/lock_button"
+        android:layout_marginTop="2dp"
+        android:onClick="onUnlock"
+        android:contentDescription="unlock button"/>
+
+</LinearLayout>

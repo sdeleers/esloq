@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/indigo_500</item>
+        <item name="colorPrimaryDark">@color/indigo_700</item>
+        <item name="colorAccent">@color/pink_a200</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeBackground">@color/indigo_500</item>
+        <!--<item name="actionModeStyle">@style/LStyled.ActionMode</item>-->
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--<style name="LStyled.ActionMode" parent="@style/Widget.AppCompat.ActionMode">-->
+    <!--<item name="background">@color/indigo_500</item>-->
+    <!--</style>-->
+
+
+</resources>

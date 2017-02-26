@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.esloq.esloqapp">
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true"/>
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_scheme"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <activity
+            android:name=".locklist.LockListActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!-- Accepts URIs that begin with "http://www.esloq.com/locks” -->
+                <data
+                    android:host="www.esloq.com"
+                    android:pathPrefix="/locks"
+                    android:scheme="http"/>
+                <!-- note that the leading "/" is required for pathPrefix -->
+                <!-- Accepts URIs that begin with "esloq://locks” -->
+                <data
+                    android:host="locks"
+                    android:scheme="esloq"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".adduser.AddUserActivity"
+            android:label="@string/title_activity_add_user"
+            android:parentActivityName=".lock.LockActivity"
+            android:windowSoftInputMode="stateVisible"/>
+        <activity
+            android:name=".scan.ScanActivity"
+            android:label="@string/title_activity_scan"
+            android:parentActivityName=".locklist.LockListActivity"/>
+        <activity
+            android:name=".lock.LockActivity"
+            android:label="@string/title_activity_lock"
+            android:parentActivityName=".locklist.LockListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".addlock.AddLockActivity"
+            android:label="@string/title_activity_add_lock"
+            android:parentActivityName=".scan.ScanActivity"
+            android:windowSoftInputMode="stateVisible"/>
+        <activity
+            android:name=".lockmanagment.LockManagementActivity"
+            android:label="@string/title_activity_lock_management"
+            android:parentActivityName=".locklist.LockListActivity"/>
+
+        <service
+            android:name=".lock.BluetoothService"
+            android:exported="false"/>
+        <service
+            android:name=".data.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name=".data.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".data.SendToServerIntentService"
+            android:exported="false"/>
+
+        <provider
+            android:name=".data.LockDataContentProvider"
+            android:authorities="com.esloq.android.app.provider.lockdatacontentprovider"
+            android:exported="false"/>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="c6a5d1b1ffad9c8132b17d1f1ec98188b8bedb7f"/>
+
+    </application>
+
+</manifest>

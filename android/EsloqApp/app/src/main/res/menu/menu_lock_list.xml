@@ -1,0 +1,11 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".locklist.LockListActivity">
+    <item
+        android:id="@+id/menu_delete_user"
+        android:icon="@drawable/ic_delete"
+        android:title="@string/menu_delete_user"
+        app:showAsAction="ifRoom"/>
+</menu>

@@ -1,0 +1,27 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:gravity="center_vertical"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:id="@+id/device_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@string/fontfamily_listitem_big"
+        android:textSize="@dimen/textsize_listitem_big"
+        android:text="Simon's Lock"
+        android:paddingBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/device_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@string/fontfamily_listitem_small"
+        android:textSize="@dimen/textsize_listitem_small"
+        android:text="00:00:00:00:00:00"/>
+
+</LinearLayout>
