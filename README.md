@@ -8,13 +8,13 @@ A demo video of the esloq:
 
 [![Smart Lock Demo](/images/video_thumbnail.png)](https://www.youtube.com/watch?v=yVSUPODDXtM)
 
-Esloq uses authentication and encryption to ensure that only the people you invite can enter. Whenever you want to open a door with your phone, the phone requests a ticket from the esloq webservers. The server returns the ticket that is authenticated encrypted under a symmetric key that is shared between the door lock and the esloq webservers (the phone does not have this key). The phone then forwards this ticket to the lock which then verifies its authenticity and opens the door if it's valid.
+Esloq uses authentication and encryption to ensure that only the people you invite can enter. Whenever you want to open a door with your phone, the phone requests a ticket from the esloq webserver. The server returns the ticket that is authenticated encrypted under a symmetric key that is shared between the door lock and the esloq webserver (the phone does not have this key). The phone then forwards this ticket to the lock which verifies its authenticity and opens the door if it's valid.
 
 This repository contains:
 - the Kicad design files to make the printed circuit board (folder /pcb/)
 - the software running on the microcontroller (folder /firmware/)
 - the Android app that connects with the door lock (folder /android/)
-- the code running on our webservers (folder /webserver/)
+- the code running on the webserver (folder /webserver/)
 
 The printed circuit board:
 
