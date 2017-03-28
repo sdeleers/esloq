@@ -1,0 +1,6 @@
+To build naclmodule, call "python setup.py build". Then move naclmodule.so file 
+to same directory as views.py.
+
+Nacl library must be compiled with -fPIC flags, edit nacl/okcompilers/c file. 
+
+
