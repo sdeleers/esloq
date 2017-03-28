@@ -14,7 +14,7 @@ This repository contains:
 - the Kicad design files to make the printed circuit board (folder /pcb/)
 - the software running on the microcontroller (folder /firmware/)
 - the Android app that connects with the door lock (folder /android/)
-- the code running on our webservers (folder /server/)
+- the code running on our webservers (folder /webserver/)
 
 The printed circuit board:
 
