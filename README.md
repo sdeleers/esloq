@@ -1,6 +1,7 @@
 # esloq
+Project data: 2014-2016
 
-Esloq is a startup I worked on from 2014 to 2016. All code written by me and Kenny Kuchera.
+Esloq is a startup I worked on from 2014 to 2016. All code written by Kenny Kuchera and me.
 
 Esloq is a door lock that can be opened with a smartphone via Bluetooth. It consists of a wooden box that is mounted on the door lock cylinder. The wooden box contains the printed circuit board and a motor that actuates the lock.
 
