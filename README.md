@@ -1,5 +1,5 @@
 # esloq
-Project data: 2014-2016
+Project date: 2014-2016
 
 Esloq is a startup I worked on from 2014 to 2016. All code written by Kenny Kuchera and me.
 
